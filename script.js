@@ -6,7 +6,7 @@ function hapusCalc() {
   document.getElementById("display").value = "";
 }
 
-function deleteLastDigit() {
+function hapusLastDigit() {
   const displayValue = document.getElementById("display").value;
   document.getElementById("display").value = displayValue.slice(0, -1);
 }
