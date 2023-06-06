@@ -1,52 +1,50 @@
 <html>
   <head>
-    <title>Kalkulator Sederhana</title>
+    <title>Kalkulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <h1>Kalkulator Sederhana</h1>
+    <div class="calculator">
+      <input type="text" id="display" readonly />
+      <div class="keypad">
+        <button onclick="hapusCalc()">C</button
+        ><!---->
+        <button onclick="deleteLastDigit()">&larr;</button
+        ><!---->
+        <button onclick="nilaiMasing2('.')">.</button
+        ><!--.-->
+        <button onclick="nilaiMasing2('/')">/</button
+        ><!--/-->
+        <button onclick="nilaiMasing2('7')">7</button
+        ><!--7-->
+        <button onclick="nilaiMasing2('8')">8</button
+        ><!--8-->
+        <button onclick="nilaiMasing2('9')">9</button
+        ><!--9-->
+        <button onclick="nilaiMasing2('*')">*</button
+        ><!--*-->
+        <button onclick="nilaiMasing2('4')">4</button
+        ><!--4-->
+        <button onclick="nilaiMasing2('5')">5</button
+        ><!--5-->
+        <button onclick="nilaiMasing2('6')">6</button
+        ><!--6-->
+        <button onclick="nilaiMasing2('-')">-</button
+        ><!-- - -->
+        <button onclick="nilaiMasing2('1')">1</button
+        ><!--1-->
+        <button onclick="nilaiMasing2('2')">2</button
+        ><!--2-->
+        <button onclick="nilaiMasing2('3')">3</button
+        ><!--3-->
+        <button onclick="nilaiMasing2('+')">+</button
+        ><!--+-->
+        <button onclick="nilaiMasing2('0')">0</button
+        ><!--0-->
+        <button onclick="hasilKeseluruhan()">=</button>
+      </div>
+    </div>
 
-    <input type="number" id="angka1" placeholder="Masukkan angka pertama" />
-    <input type="number" id="angka2" placeholder="Masukkan angka kedua" />
-
-    <br /><br />
-    <button onclick="hitungPenjumlahan()">+</button>
-    <button onclick="hitungPengurangan()">-</button>
-    <button onclick="hitungPerkalian()">*</button>
-    <button onclick="hitungPembagian()">/</button>
-    <br />
-
-    <h2>Hasil :</h2>
-
-    <p id="hasil"></p>
+    <script src="script.js"></script>
   </body>
 </html>
-<script>
-  function hitungPenjumlahan() {
-    //parseInt () digunakan untuk mengebah string to integer
-    var angka1 = parseInt(document.getElementById("angka1").value);
-    var angka2 = parseInt(document.getElementById("angka2").value);
-    var hasil = angka1 + angka2;
-    document.getElementById("hasil").innerHTML = hasil;
-  }
-
-  function hitungPengurangan() {
-    var angka1 = document.getElementById("angka1").value;
-    var angka2 = document.getElementById("angka2").value;
-    var hasil = angka1 - angka2;
-    document.getElementById("hasil").innerHTML = hasil;
-  }
-
-  function hitungPerkalian() {
-    var angka1 = document.getElementById("angka1").value;
-    var angka2 = document.getElementById("angka2").value;
-    var hasil = angka1 * angka2;
-    document.getElementById("hasil").innerHTML = hasil;
-  }
-
-  function hitungPembagian() {
-    var angka1 = document.getElementById("angka1").value;
-    var angka2 = document.getElementById("angka2").value;
-    var hasil = angka1 / angka2;
-    document.getElementById("hasil").innerHTML = hasil;
-  }
-</script>
