@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana</h1>
+
+    <input type="number" id="angka1" placeholder="Masukkan angka pertama" />
+    <input type="number" id="angka2" placeholder="Masukkan angka kedua" />
+
+    <br /><br />
+    <button onclick="hitungPenjumlahan()">+</button>
+    <button onclick="hitungPengurangan()">-</button>
+    <button onclick="hitungPerkalian()">*</button>
+    <button onclick="hitungPembagian()">/</button>
+    <br />
+
+    <h2>Hasil :</h2>
+
+    <p id="hasil"></p>
+  </body>
+</html>
+<script>
+  function hitungPenjumlahan() {
+    //parseInt () digunakan untuk mengebah string to integer
+    var angka1 = parseInt(document.getElementById("angka1").value);
+    var angka2 = parseInt(document.getElementById("angka2").value);
+    var hasil = angka1 + angka2;
+    document.getElementById("hasil").innerHTML = hasil;
+  }
+
+  function hitungPengurangan() {
+    var angka1 = document.getElementById("angka1").value;
+    var angka2 = document.getElementById("angka2").value;
+    var hasil = angka1 - angka2;
+    document.getElementById("hasil").innerHTML = hasil;
+  }
+
+  function hitungPerkalian() {
+    var angka1 = document.getElementById("angka1").value;
+    var angka2 = document.getElementById("angka2").value;
+    var hasil = angka1 * angka2;
+    document.getElementById("hasil").innerHTML = hasil;
+  }
+
+  function hitungPembagian() {
+    var angka1 = document.getElementById("angka1").value;
+    var angka2 = document.getElementById("angka2").value;
+    var hasil = angka1 / angka2;
+    document.getElementById("hasil").innerHTML = hasil;
+  }
+</script>
